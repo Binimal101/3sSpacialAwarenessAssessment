@@ -1,15 +1,17 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
-</head>
+    <title>3s Table</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 <body>
-    <h1>Hello from Flask!</h1>
-</body>
+    <table>
+        <tbody id="table-body">
+            <!-- Table content generated dynamically from JavaScript -->
+        </tbody>
+    </table>
+    <button id="done-button">Done</button>
+
+    <script src="{{ url_for('static', filename='buttons.js') }}"></script></body>
 </html>
-=======
-<!--Page 1-->
->>>>>>> b651073559a99dc85f79ecf104d0336007e30658

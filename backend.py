@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, render_template, request, url_for, CORS
-
+from flask import Flask, jsonify, render_template, request, url_for
+from flask_cors import CORS
 # flask app
 app = Flask(__name__)
 CORS(app)
@@ -19,3 +19,6 @@ def timeseries_results():
 @app.route('/FinalResults')
 def final_results():
     return render_template('final_results.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)

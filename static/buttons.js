@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 for (let i = 0; i < cellString.length; i++) {
                     const button = document.createElement('button');
                     button.textContent = cellString[i];
-                    button.onclick = () => handleClick(rowIndex, colIndex, i, cellString[i]);
+                    button.onclick = () => handleClick(rowIndex, colIndex, i, cellString[i]); // How I store the data
                     cell.appendChild(button);
                 }
                 row.appendChild(cell);
