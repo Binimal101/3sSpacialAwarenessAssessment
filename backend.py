@@ -6,7 +6,7 @@ CORS(app)
 #app route
 @app.route('/')
 def home():
-    return render_template('index.html'); #make dynamic later
+    return render_template('home.html'); #make dynamic later
 
 @app.route('/regular')
 def regular():
