@@ -1,8 +1,8 @@
-from flask import Flask, jsonify, render_template, request, url_for
+from flask import Flask, jsonify, render_template, request, url_for, CORS
 
 # flask app
 app = Flask(__name__)
-
+CORS(app)
 #app route
 @app.route('/')
 def home():
