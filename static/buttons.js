@@ -49,17 +49,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         
         const timestamp = Date.now() - startTime;
-        clickData.push([row, col, index, timestamp]);
+        clickData.push([row, col, index, Math.round(timestamp/1000)]);
         console.log("Click data:", clickData);
     }
 
     // Function to handle "Done" button click
     document.getElementById('done-button').onclick = () => {
         const totalDuration = Date.now() - startTime;
-        console.log("Final click data:", clickData);
         console.log("Total time (ms):", totalDuration); //Make this is seconds later, currently in miliseconds
-        alert(`Total time: ${totalDuration} ms`);
+        console.log("I should run")
+
+        // Send clickData to Flask for processing
+        fetch('http://127.0.0.1:5000/api/submitTest', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ "clickData": clickData })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Data received from server:', data);
+        })
+        .catch(error => console.error('Error:', error));
     };
+        
 
     // Initialize the table
     createTable();
