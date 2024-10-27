@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 table {
@@ -8,21 +9,42 @@ table {
 }
 
 td {
-    border: 1px solid #000;
-    padding: 5px;
+    border: 1px solid #ddd;
+    padding: 5px; /* Adjust padding to reduce space between digits */
     text-align: center;
+    height: 40px; /* Ensure rows are a bit taller for better visual spacing */
 }
 
 button {
-    width: 20px;
-    height: 20px;
-    font-size: 1em;
-    margin: 1px;
+    border: none;
+    background: none;
+    font-size: 18px; /* Adjust font size for better visibility */
+    cursor: pointer;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
 }
 
-#done-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 1em;
+button.digit-button {
+    padding: 0; /* Ensure no extra padding */
+    margin: 0; /* Ensure no extra margin */
+}
+
+button.strikethrough {
+    text-decoration: line-through;
+    color: red;
+}
+
+
+
+.done-button {
+    background-color: #007BFF; /* Blue background for the button */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size for the button */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+.done-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }

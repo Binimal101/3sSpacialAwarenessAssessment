@@ -1,0 +1,57 @@
+body {
+    background-color: black; /* Set the background to black */
+    color: #80beff; /* Set text color to #80beff */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.corner-image {
+    position: absolute;
+    width: 50px; /* Set the size of the corner images */
+    opacity: 0.7; /* Slight transparency */
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+h1 {
+    margin-top: 40px; /* Space above the title */
+    color: white; /* Set the title to white */
+}
+
+p {
+    margin: 20px 0; /* Space around the paragraph */
+    color: white; /* Set the paragraph text to white */
+}
+
+#done-button {
+    background-color: green; /* Green background for the button */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#done-button:hover {
+    background-color: darkgreen; /* Darker green on hover */
+}

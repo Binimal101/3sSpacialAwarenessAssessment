@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>3s Timeseries Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='timeseries_results.css') }}">
 </head>
 <body>
-    <h1>Results Page</h1>
-
-    <!-- Add this div for dynamic content -->
-    <div id="results-data"></div>
-
-    <!-- Link to JavaScript file -->
-    <script src="/static/script.js"></script>
+    <h1>3s Timeseries Results</h1>
+    
+    <div id="table-container">
+        <table id="results-table">
+            <tbody id="results-data">
+                <!-- Dynamic table content will be filled by JavaScript later -->
+            </tbody>
+        </table>
+    </div>
+    
+    <button id="done-button">Done</button>
+    
+    <script>
+        // This script can be used to dynamically add content later
+        document.getElementById('done-button').onclick = () => {
+            alert("You have completed the task!");
+        };
+    </script>
 </body>
 </html>

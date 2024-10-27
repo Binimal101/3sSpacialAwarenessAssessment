@@ -3,16 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 2</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>3s Spreadsheet Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='regular.css') }}">
 </head>
 <body>
-    <h1>Page 2</h1>
+    <div class="header">
+        <h1>3s Spreadsheet Test (Timed Scoring Sheet)</h1>
+    </div>
+    <div class="main-content">
+        <form id="scoring-form">
+            <label for="participant-id">Participant ID:</label>
+            <input type="text" id="participant-id" name="participant-id"><br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"><br>
 
-    <!-- Add this div for dynamic content -->
-    <div id="page2-data"></div>
+            <h2>Time: 5:00 (min:sec) = 300 sec</h2>
+            <h3>Number of crossed 3s in each column (left vs. right side of strings):</h3>
+            <table>
+                <tr>
+                    <td><input type="text" class="crossed-3s" placeholder="6/6"></td>
+                    <td><input type="text" class="crossed-3s" placeholder="6/6"></td>
+                    <td><input type="text" class="crossed-3s" placeholder="6/6"></td>
+                    <td><input type="text" class="crossed-3s" placeholder="6/6"></td>
+                    <td><input type="text" class="crossed-3s" placeholder="6/6"></td>
+                    <td><input type="text" class="crossed-3s" placeholder="6/6"></td>
+                    <td><input type="text" class="crossed-3s" placeholder="6/6"></td>
+                    <td><input type="text" class="crossed-3s" placeholder="6/6"></td>
+                    <td><input type="text" class="crossed-3s" placeholder="6/6"></td>
+                    <td><input type="text" class="crossed-3s" placeholder="6/6"></td>
+                </tr>
+            </table>
 
-    <!-- Link to JavaScript file -->
-    <script src="/static/script.js"></script>
+            <h3>Number of crossed 3s in each quadrant (left vs. right side of strings):</h3>
+            <p>Upper left: <input type="text" placeholder="15/15"></p>
+            <p>Lower left: <input type="text" placeholder="15/15"></p>
+            <p>Upper right: <input type="text" placeholder="15/15"></p>
+            <p>Lower right: <input type="text" placeholder="15/15"></p>
+
+            <h3>Total number of crossed 3s: <input type="text"></h3>
+            <h3>Total number of omissions: <input type="text"> = 120 - t</h3>
+
+            <button id="done-button" class="done-button">Submit</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -64,3 +64,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize the table
     createTable();
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll("#number-table button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            button.classList.toggle("strikethrough");
+        });
+    });
+
+    document.getElementById('done-button').onclick = () => {
+        alert("You have completed the task!");
+        // You can implement additional functionality here if needed
+    };
+});
+
