@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: left; /* Aligns text to the left */
+    margin: 20px; /* Add some margin around the body */
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+}
+
+#table-container {
+    border: 2px solid #000; /* Adds a border around the table */
+    padding: 10px; /* Add some padding inside the border */
+    margin-bottom: 20px; /* Space below the table */
+}
+
+table {
+    width: 100%; /* Full width of the container */
+    border-collapse: collapse; /* Merge borders */
+}
+
+td {
+    border: 1px solid #ddd; /* Border for table cells */
+    height: 40px; /* Set a height for empty table cells */
+    text-align: center; /* Center text in table cells */
+}
+
+#done-button {
+    background-color: green; /* Green background for the button */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: block; /* Block display to center the button */
+    margin: 20px auto; /* Center the button */
+}
+
+#done-button:hover {
+    background-color: darkgreen; /* Darker green on hover */
+}
